@@ -199,7 +199,6 @@ def add_trackpoint(element, trackpoint):
         exelem = create_sub_element(element, "Extensions")
         tpx = create_sub_element(exelem, "TPX")
         tpx.set("xmlns", "http://www.garmin.com/xmlschemas/ActivityExtension/v2")
-        tpx.set("CadenceSensor", "Footpod")
         create_sub_element(tpx, "Speed", ff(speed))
 
         if power is not None:
