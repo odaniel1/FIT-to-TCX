@@ -203,7 +203,7 @@ def add_trackpoint(element, trackpoint):
         create_sub_element(tpx, "Speed", ff(speed))
 
         if power is not None:
-            create_sub_element(tpx, "Power", ff(power))
+            create_sub_element(tpx, "Watts", ff(power))
 
 
 def add_lap(element, activity, lap):
