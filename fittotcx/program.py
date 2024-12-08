@@ -167,7 +167,7 @@ def add_trackpoint(element, trackpoint):
     distance = trackpoint.get_value("distance")
     altitude = trackpoint.get_value("altitude")
     speed = trackpoint.get_value("speed")
-    watts = trackpoint.get_value("watts")
+    power = trackpoint.get_value("power")
     heart_rate = trackpoint.get_value("heart_rate")
     cadence = trackpoint.get_value("cadence")
 
@@ -202,8 +202,8 @@ def add_trackpoint(element, trackpoint):
         tpx.set("CadenceSensor", "Footpod")
         create_sub_element(tpx, "Speed", ff(speed))
 
-        if watts is not None:
-            create_sub_element(tpx, "Watts", ff(watts))
+        if power is not None:
+            create_sub_element(tpx, "Power", ff(power))
 
 
 def add_lap(element, activity, lap):
